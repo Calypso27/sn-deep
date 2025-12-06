@@ -45,7 +45,7 @@ def preprocess_image(image: Image.Image) -> np.ndarray:
     image = image.convert("RGB")
     image = image.resize((IMG_SIZE, IMG_SIZE))
     arr = np.array(image) / 255.0
-    arr = np.expand_dims(arr, axis=0)  # (1, H, W, 3)
+    arr = np.expand_dims(arr, axis=0)
     return arr
 
 
@@ -92,3 +92,4 @@ if uploaded_file is not None:
 
 else:
     st.info("Charge une image pour commencer le diagnostic.")
+
