@@ -22,7 +22,7 @@ st.write(
 
 @st.cache_resource
 def load_model():
-    model = keras.models.load_model("models/deep_cnn.h5")
+    model = keras.models.load_model("deep_cnn.h5")
     return model
 
 model = load_model()
@@ -92,4 +92,5 @@ if uploaded_file is not None:
 
 else:
     st.info("Charge une image pour commencer le diagnostic.")
+
 
